@@ -8,35 +8,41 @@ $color-bg:#6483EA;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    max-width: 1600px;
+}
+
 
 .header {
    
-    background-image: url(../image/0.svg);
+    background-image: url(../image/1.svg);
+    
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 30px;
+    
 
-    nav{
-        display: flex;
-        justify-content: space-between;
+    &__nav{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
         align-items: center;
-        margin: 0 130px;
+       margin-left: 80px;
+           
+    }
 
-    }
-    &__menu{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 20px;
-        padding-left: 10px;
-    }
+
     &__list{
         display: inline-block;
-        padding: 0 10px;
+      
 
     }
     &__list a{
         color: $color-seconday;
         text-decoration: none;
-        padding-left: 30px;
-        font-weight: 400;
+        padding-right: 30px;
+        font-size: 1.2rem;
     }
 
    
@@ -49,6 +55,7 @@ $color-bg:#6483EA;
     padding: 10px 20px;
     border:none;
     text-align: center;
+    font-size: 1rem;
     font-weight: 400;
 
     &--primary{
@@ -60,41 +67,62 @@ $color-bg:#6483EA;
     }
  }
 
+
 .video{
 
-    background-image: url(../image/Video.svg);
-    width: 1170px;
-   height: 680px;
-    margin: 35px 80px;
-    padding-left: 30px;
+   background-image: url(../image/Videob.svg);
+   text-align: center;
+   background-repeat: no-repeat;
+    padding-bottom: 140px;
+   background-size: 100%;
+   position: relative;
+   margin: 30px 50px;
    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 20px;
-    padding-top: 20px;
+   &__wrapper{
 
-    &__header{
-        color: $color-primary;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    &__header h2{
-        margin-bottom: 20px;
-        font-size: 2.5rem;
-    }
-    &__header h4{
-        margin-bottom: 20px;
-        font-size: 1.5rem;
-        font-weight: 400;
-    }
-   
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       row-gap: 20px;
+       align-items: center;
+     
+   }
+   &__header{
+       color:#375363;
+    
+       font-weight: 400;
+       margin-bottom: 10px;
+       text-decoration: none;
 
- }
+       h2{
+           font-size: 2.5rem;
+       }
+       h4{
+           font-size: 1.2rem;
+       }
+   }
+   &__container{
+       position: relative;
+       padding-top: 30px;
+       overflow: hidden;
+       padding-bottom: 36.25%;
+       width: 70%;
+       margin-top: 20px;
+       
+       iframe{
+           position: absolute;
+           top:0;
+           left: 0;
+           width: 100%;
+           height: 100%; 
+       }
+   }
+ 
 
+}
  .about{
      text-align: center;
-     margin: 40px 40px;
+     margin: 0 40px;
      padding: 0 120px;
      color: $color-primary;
      display: flex;
@@ -114,24 +142,21 @@ $color-bg:#6483EA;
 
  .banner{
      background-image: url(../image/banner.svg);
-     height: 385px;
-     display: flex;
-     flex-grow: 1;
-     align-items: center;
-     text-align: center;
-     position: relative;
+     background-repeat: no-repeat;
+     background-size: cover;
+    position: relative;
+    
+     padding-top: 140px;
+     padding-bottom: 50px;
 
      &__wrapper{
         display: flex;
         flex-direction: column;
-        align-items:bottom;
-        position: absolute;
-        top:70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-     }
-     
-     
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+       
+     }     
 
      &__title h2{
          color: $color-seconday;
@@ -156,4 +181,16 @@ $color-bg:#6483EA;
          font-weight: 100;
          font-size: 1rem;
      }
+ }
+
+ @media screen and (max-width: 960px) {
+    header{
+        max-width: 960px;
+        
+    }
+    .header__nav{
+        margin-left: 120px;
+        font-size: 10px;
+    }
+     
  }
