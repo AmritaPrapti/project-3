@@ -5,10 +5,6 @@
           box-sizing: border-box;
 }
 
-body {
-  max-width: 1600px;
-}
-
 .header {
   background-image: url(../image/1.svg);
   text-align: center;
@@ -16,6 +12,7 @@ body {
   background-size: cover;
   position: relative;
   padding-bottom: 30px;
+  max-width: 120rem;
 }
 
 .header__nav {
@@ -88,17 +85,18 @@ body {
 
 .video__header {
   color: #375363;
-  font-weight: 400;
   margin-bottom: 10px;
   text-decoration: none;
 }
 
 .video__header h2 {
   font-size: 2.5rem;
+  font-weight: 400;
 }
 
 .video__header h4 {
   font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .video__container {
@@ -138,6 +136,7 @@ body {
 .about h2 {
   margin-bottom: 20px;
   font-size: 2.5rem;
+  font-weight: 400;
 }
 
 .about p {
@@ -152,7 +151,9 @@ body {
   background-size: cover;
   position: relative;
   padding-top: 140px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
+  max-width: 120rem;
+  font-weight: 400;
 }
 
 .banner__wrapper {
@@ -169,6 +170,7 @@ body {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-top: 40px;
 }
 
 .banner__title h2 {
@@ -198,11 +200,30 @@ body {
 
 @media screen and (max-width: 960px) {
   header {
-    max-width: 960px;
+    max-width: 950px;
   }
   .header__nav {
-    margin-left: 120px;
+    margin-left: 7.8rem;
     font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .header__nav {
+    padding: 20px 0;
+    font-size: 1.5rem;
+    margin-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header__list {
+    display: none;
+  }
+  .header__nav {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin-left: 2.6rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
